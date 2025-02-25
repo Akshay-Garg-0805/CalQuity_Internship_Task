@@ -1,0 +1,16 @@
+2025-02-25 16:32:24,827 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.52000427246094, 'Low': 244.91000366210938, 'Close': 246.6699981689453, 'Volume': 17615949}
+2025-02-25 16:46:29,522 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.52000427246094, 'Low': 244.91000366210938, 'Close': 248.13999938964844, 'Volume': 19267957}
+2025-02-25 16:47:43,151 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.52000427246094, 'Low': 244.91000366210938, 'Close': 248.1699981689453, 'Volume': 19368694}
+2025-02-25 16:48:19,047 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.52000427246094, 'Low': 244.91000366210938, 'Close': 248.22500610351562, 'Volume': 19435366}
+2025-02-25 16:51:12,427 - INFO - Fetched historical data for AAPL from 2023-01-01 to 2023-02-01
+2025-02-25 16:51:13,159 - INFO - Saved stock data plot for AAPL to AAPL_stock_trend_2023-01-01_to_2023-02-01.png
+2025-02-25 16:58:47,367 - ERROR - $AAPL: possibly delisted; no price data found  (1d 2023-01-01 -> 2023-01-01)
+2025-02-25 16:58:47,368 - ERROR - No data found for symbol AAPL on 2023-01-01
+2025-02-25 17:00:06,668 - ERROR - $AAPL: possibly delisted; no price data found  (1d 2023-02-24 -> 2023-02-24)
+2025-02-25 17:00:06,669 - ERROR - No data found for symbol AAPL on 2023-02-24
+2025-02-25 17:03:45,325 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.97999572753906, 'Low': 244.91000366210938, 'Close': 249.25999450683594, 'Volume': 22031926}
+2025-02-25 17:06:56,039 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.97999572753906, 'Low': 244.91000366210938, 'Close': 249.3300018310547, 'Volume': 22279133}
+2025-02-25 17:07:03,139 - INFO - Fetched historical data for AAPL from 2023-01-01 to 2023-01-10
+2025-02-25 17:07:03,892 - INFO - Saved stock data plot for AAPL to AAPL_stock_trend_2023-01-01_to_2023-01-10.png
+2025-02-25 17:12:29,660 - INFO - Fetched stock data for GOOGL: {'Open': 178.02999877929688, 'High': 178.74000549316406, 'Low': 174.6938934326172, 'Close': 176.9149932861328, 'Volume': 16750189}
+2025-02-25 17:25:10,672 - INFO - Fetched stock data for AAPL: {'Open': 248.0, 'High': 249.97999572753906, 'Low': 244.91000366210938, 'Close': 249.27999877929688, 'Volume': 23740521}
