@@ -6,7 +6,7 @@ import datetime
 
 def load_model(prompt):
     llama_bin = "./llama.cpp/build/bin/llama-run"
-    model_path = "file://./models/mistral-7b-instruct-v0.1.Q6_K.gguf"  # Added file:// prefix
+    model_path = "file://./models/mistral-7b-instruct-v0.1.Q6_K.gguf" 
 
     result = subprocess.run([llama_bin, model_path, prompt], capture_output=True, text=True)
     
@@ -17,6 +17,7 @@ def load_model(prompt):
 
 def plot_stock_trend(stock_symbol, start_date, end_date):
     """Fetch historical data for the given range and save it as a plot."""
+    
     # Define a file path to save the plot (e.g., in the current directory)
     file_path = f"{stock_symbol}_stock_trend_{start_date}_to_{end_date}.png"
     
@@ -25,6 +26,7 @@ def plot_stock_trend(stock_symbol, start_date, end_date):
     return plot_result  # Return the result of plotting
 
 def financial_agent(user_input):
+    
     # Regex for asking about the stock price (current day)
     stock_pattern = re.compile(r"what is the stock price of (\w+)", re.IGNORECASE)
     
