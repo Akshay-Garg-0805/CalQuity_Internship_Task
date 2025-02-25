@@ -1,27 +1,32 @@
-# CalQuity Internship Task
-
-## 🚀 Objective
-
-Welcome to the **AI Engineering Internship Task**! This project demonstrates the creation of a basic AI agent that interacts with the **yfinance API** to fetch real-time stock prices and visualize stock trends. The agent was built using Python, and the goal was to showcase the agent's ability to execute predefined tasks with a custom tool.
-
-## ⚙️ How It Works
-
-The agent can perform two key functionalities:
-1. **Fetch Stock Price**: Query the current stock price of a given stock symbol.
-2. **Plot Stock Trend**: Fetch and plot the stock price trend over a specific date range.
-
-### Example Use Cases
-- **What is the stock price of AAPL?**
-- **Plot stock price of AAPL from 2023-01-01 to 2023-12-31**
+# **CalQuity Internship Task** 🚀  
 
 ---
 
-## 🔧 Installation & Setup
+## **🎯 Objective**  
 
-To replicate the output of this project, follow the steps below:
+Welcome to the **AI Engineering Internship Task**! This project demonstrates the creation of a **financial AI agent** that:  
+✅ Fetches **real-time stock prices** 📈  
+✅ Plots **historical stock trends** 📊  
+✅ Uses a **local LLM (Mistral-7B-Instruct)** 🤖  
 
-### **1. Clone the Repository**
-First, clone this repository to your local machine:
+---
+
+## **⚙️ How It Works**  
+
+- The agent listens to **user queries** and processes them intelligently.  
+- It fetches stock prices using **yfinance API**.  
+- It generates **trend plots** and saves them as images.  
+- It runs on a **local LLM** using `llama.cpp`, ensuring full privacy and efficiency.  
+
+### **Example Queries:**  
+✅ `"What is the stock price of AAPL?"`  
+✅ `"Plot stock price of TSLA from 2023-01-01 to 2023-12-31"`  
+
+---
+
+## **🛠️ Installation & Setup**  
+
+### **1️⃣ Clone the Repository**  
 ```bash
 git clone https://github.com/Akshay-Garg-0805/CalQuity_Internship_Task.git
 cd CalQuity_Internship_Task
@@ -29,26 +34,24 @@ cd CalQuity_Internship_Task
 
 ---
 
-### **2. Set Up Virtual Environment**
-Create and activate a Python virtual environment:
+### **2️⃣ Set Up Virtual Environment**  
+Create and activate a **Python virtual environment**:  
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate     # On Windows (if using PowerShell)
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate     # Windows (PowerShell)
 ```
 
 ---
 
-### **3. Install Dependencies**
-Install the required Python packages:
+### **3️⃣ Install Dependencies**  
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-### **4. Clone and Build `llama.cpp`**
-Clone and build `llama.cpp` for running the local LLM:
+### **4️⃣ Clone & Build `llama.cpp`**  
 ```bash
 git clone https://github.com/ggml-org/llama.cpp.git
 cd llama.cpp
@@ -57,11 +60,10 @@ cmake ..
 cmake --build .
 cd ../..
 ```
-
 ---
 
-### **5. Download the LLM Model**
-Download the **Mistral-7B-Instruct GGUF** model file:
+### **5️⃣ Download the LLM Model**  
+Download the **Mistral-7B-Instruct GGUF** model:  
 ```bash
 mkdir -p models
 wget https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q6_K.gguf -O models/mistral-7b-instruct-v0.1.Q6_K.gguf
@@ -69,36 +71,30 @@ wget https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/
 
 ---
 
-### **6. Run the Agent**
-Run the agent using:
+### **6️⃣ Run the Agent**  
 ```bash
 python main.py
 ```
 
----
-
-## 📂 Project Files
-
-### `agent.py`
-Contains the core logic for the financial agent.
-
-### `main.py`
-The main script to interact with the agent through the command line.
-
-### `tools/finance_tool.py`
-Contains the code to fetch stock data and generate plots using the yfinance API.
 
 ---
 
-## 🖼️ Example Outputs
+## **📂 Project Files**  
 
-### **1. Stock Price Query**
-When you ask for a stock price like:
+📌 **`agent.py`** → Core logic of the financial agent.  
+📌 **`main.py`** → CLI interaction with the agent.  
+📌 **`tools/finance_tool.py`** → Fetches stock prices & generates plots.  
+
+---
+
+## **📊 Example Outputs**  
+
+### **1️⃣ Stock Price Query**  
+Query:  
 ```bash
 What is the stock price of AAPL?
 ```
-The agent will respond with the latest stock price, like so:
-
+**Response:**  
 ```json
 {
   "Open": 248.0,
@@ -111,53 +107,58 @@ The agent will respond with the latest stock price, like so:
 
 ---
 
-### **2. Stock Trend Plot**
-When you ask to plot the stock trend for a date range:
+### **2️⃣ Stock Trend Plot**  
+Query:  
 ```bash
 Plot stock price of AAPL from 2023-01-01 to 2023-12-31
 ```
-The agent will fetch historical data and **save the plot** to a file.
-
----
-
-## 📋 Instructions to Replicate the Output
-
-### 1. Clone the repository as mentioned above.
-### 2. Set up the virtual environment.
-### 3. Install the dependencies.
-### 4. Clone and build `llama.cpp`.
-### 5. Download the LLM model.
-### 6. Run the financial agent:
+**Response:**  
 ```bash
-python main.py
+Plot saved to AAPL_stock_trend_2023-01-01_to_2023-12-31.png
 ```
-### 7. Try these queries to see the agent in action:
-- `"What is the stock price of AAPL?"`
-- `"Plot stock price of AAPL from 2023-01-01 to 2023-12-31"`
+**Generated Plot (Saved, Not Shown)**  
 
 ---
 
-## 🛠️ Tools & Technologies
+## **🔄 Instructions to Replicate Output**  
 
-- **Python**: The core language for implementing the agent.
-- **yfinance**: To fetch stock prices and historical data.
-- **Matplotlib**: To visualize stock trends.
-- **Regex**: For extracting the user's query and executing relevant actions.
-- **llama.cpp**: Running the local LLM for agent responses.
-
----
-
-## 🧑‍💻 Author
-
-- **Name**: Akshay Garg
-- **Email**: gargakshay0805@gmail.com
+1️⃣ Clone the repository.  
+2️⃣ Set up the virtual environment.  
+3️⃣ Install the dependencies.  
+4️⃣ Clone & build `llama.cpp`.  
+5️⃣ Download the LLM model.  
+6️⃣ Run the agent using `python main.py`.  
+7️⃣ Try queries like:  
+   - `"What is the stock price of AAPL?"`  
+   - `"Plot stock price of AAPL from 2023-01-01 to 2023-12-31"`  
 
 ---
 
-## 🎥 Video Demo
+## **🛠️ Tools & Technologies Used**  
 
-Watch the demo of the project in action:
+- 🐍 **Python** → Core programming language.  
+- 📈 **yfinance** → Fetches real-time stock prices.  
+- 🎨 **Matplotlib** → Generates stock trend visualizations.  
+- 🔍 **Regex** → Extracts user intent from queries.  
+- 🤖 **llama.cpp** → Runs the local LLM (Mistral-7B).  
 
-[🔗 Link to Demo Video](#)
+---
+
+## **👨‍💻 Author**  
+
+- **Name**: Akshay Garg  
+- **Email**: gargakshay0805@gmail.com  
+
+---
+
+## **📽️ Video Demo**  
+
+🔗 [Watch Demo](https://your-video-link.com)  
+
+---
+
+## **📜 License**  
+
+This project is licensed under the **MIT License**.  
 
 ---
