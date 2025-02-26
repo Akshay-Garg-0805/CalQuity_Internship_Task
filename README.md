@@ -153,7 +153,7 @@ Plot saved to AAPL_stock_trend_2023-01-01_to_2023-12-31.png
 
 ## **📽️ Video Demo**  
 
-🔗 [Watch Demo](https://your-video-link.com)  
+🔗 [Watch Demo]((https://drive.google.com/file/d/1SzlcfdtaZVp4bHDY2eJK_PYa5X6dQeKD/view?usp=sharing))  
 
 ---
 
